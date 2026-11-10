@@ -1,3 +1,15 @@
-Assembler for LC-3 assembly. Done to better understand the format for UW-Madison's ECE 252.
+# LC-3 Assembler (`lcas`)
 
-Originally created July 2026.
+A two-pass assembler in Rust for the LC-3 (Little Computer 3) architecture.
+
+### Features
+- Lexes and parses LC-3 assembly directives (`.ORIG`, `.FILL`, `.BLKW`, `.STRINGZ`, `.END`) and instructions
+- Two-pass symbol resolution to map labels to memory addresses
+- Emits assembled machine code directly to binary object files (`out.obj`)
+
+### Usage
+Place your assembly source in `in.asm` and run:
+
+```bash
+cargo run
+```
